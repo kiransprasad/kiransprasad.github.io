@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    color: aquamarine;
+    color: #FF5733;
 }
 
 h1, h2, h3, h4 {
@@ -27,7 +27,7 @@ h1, h2, h3, h4 {
 #slides {
     padding: 10px;
     border: 3px solid white;
-    background: aquamarine;
+    background: #FF5733;
     position: relative;
     z-index: 1;
 }
@@ -113,7 +113,7 @@ h1, h2, h3, h4 {
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(1) {
     
-    background: url(https://image.flaticom.com/icons/svg/130/130884.svg) no-repeat;
+    background: white;
     float: left;
     margin: 0 0 0 -50px;
     display: block;
@@ -124,7 +124,7 @@ h1, h2, h3, h4 {
 #slide3:checked ~ #controls label:nth-last-child(4),
 #slide4:checked ~ #controls label:nth-last-child(1) {
     
-    background: url(https://image.flaticom.com/icons/svg/130/130882.svg) no-repeat;
+    background: white;
     float: left;
     margin: 0 0 0 -50px;
     display: block;
@@ -148,7 +148,7 @@ h1, h2, h3, h4 {
 #slide3:checked ~ #bullets label:nth-child(3),
 #slide4:checked ~ #bullets label:nth-child(4) {
     
-    background: aquamarine;
+    background: #FF5733;
 }
 
 @media screen and (max-width: 900px) {

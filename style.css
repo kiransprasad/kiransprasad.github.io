@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
     text-decoration: none;
 }
 
-#slides {
+#web_slides, #gj_slides {
     padding: 10px;
     border: 3px solid white;
     background: #A2E4B8;
@@ -37,30 +37,42 @@ h1, h2, h3, h4 {
     overflow: hidden;
 }
 
-#slide1:checked ~ #slides .inner {
+#web_slide1:checked ~ #slides .inner {
     margin-left: 0;
 }
 
-#slide2:checked ~ #slides .inner {
+#web_slide2:checked ~ #slides .inner {
     margin-left: -100%;
 }
 
-#slide3:checked ~ #slides .inner {
+#web_slide3:checked ~ #slides .inner {
     margin-left: -200%;
 }
 
-#slide4:checked ~ #slides .inner {
+#gj_slide1:checked ~ #slides .inner {
+    margin-left: 0;
+}
+
+#gj_slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+
+#gj_slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+
+#gj_slide4:checked ~ #slides .inner {
     margin-left: -300%;
 }
 
-#slides .inner {
+#web_slides .inner, #gj_slides .inner {
     transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
     width: 400%;
     line-height: 0;
     height: 300px;
 }
 
-#slides .slide {
+#web_slides .inner, #gj_slides .slide {
     width: 25%;
     float: left;
     display: block;
@@ -68,27 +80,11 @@ h1, h2, h3, h4 {
     color: black;
 }
 
-#slides .slide_1 {
-    background: blue;
-}
-
-#slides .slide_2 {
-    background: blue;
-}
-
-#slides .slide_3 {
-    background: blue;
-}
-
-#slides .slide_4 {
-    background: blue;
-}
-
 .slide-content {
     padding: 10px;
 }
 
-#controls {
+#web_controls, #gj_controls {
     margin: -180px 0 0 0;
     width: 100%;
     height: 50px;
@@ -96,7 +92,7 @@ h1, h2, h3, h4 {
     position: relative;
 }
 
-#controls label {
+#web_controls label, #gj_controls label {
     transition: opacity 0.2s ease-out;
     display: none;
     width: 50px;
@@ -104,28 +100,37 @@ h1, h2, h3, h4 {
     opacity: .4;
 }
 
-#controls label:hover {
-    opacity: .1;
+#web_controls label:hover, #web_controls label:hover {
+    opacity: 1;
 }
 
-#slide1:checked ~ #controls label:nth-child(2),
-#slide2:checked ~ #controls label:nth-child(3),
-#slide3:checked ~ #controls label:nth-child(4),
-#slide4:checked ~ #controls label:nth-child(1) {
+#web_slide1:checked ~ #web_controls label:nth-child(2),
+#web_slide2:checked ~ #web_controls label:nth-child(3),
+#web_slide3:checked ~ #web_controls label:nth-child(4),
+#web_slide4:checked ~ #web_controls label:nth-child(1),
+#gj_slide1:checked ~ #gj_controls label:nth-child(2),
+#gj_slide2:checked ~ #gj_controls label:nth-child(3),
+#gj_slide3:checked ~ #gj_controls label:nth-child(4),
+#gj_slide4:checked ~ #gj_controls label:nth-child(1) {
     
-    background: url("res/RightArrow.png") no-repeat;
-    background-color: #cccccc;
+    background-image: url("res/RightArrow.png");
+    background-color: white;
     float: right;
     margin: 0 0 0 50px;
     display: block;
 }
 
-#slide1:checked ~ #controls label:nth-child(4),
-#slide2:checked ~ #controls label:nth-child(1),
-#slide3:checked ~ #controls label:nth-child(2),
-#slide4:checked ~ #controls label:nth-child(3) {
+#web_slide1:checked ~ #web_controls label:nth-child(4),
+#web_slide2:checked ~ #web_controls label:nth-child(1),
+#web_slide3:checked ~ #web_controls label:nth-child(2),
+#web_slide4:checked ~ #web_controls label:nth-child(3),
+#gj_slide1:checked ~ #gj_controls label:nth-child(4),
+#gj_slide2:checked ~ #gj_controls label:nth-child(1),
+#gj_slide3:checked ~ #gj_controls label:nth-child(2),
+#gj_slide4:checked ~ #gj_controls label:nth-child(3) {
     
-    background: url("res/LeftArrow.png") no-repeat;
+    background-image: url("res/LeftArrow.png");
+    background-color: white;
     float: left;
     margin: 0 0 0 -50px;
     display: block;
@@ -144,25 +149,14 @@ h1, h2, h3, h4 {
     margin: 0 10px;
 }
 
-#slide1:checked ~ #bullets label:nth-child(1),
-#slide2:checked ~ #bullets label:nth-child(2),
-#slide3:checked ~ #bullets label:nth-child(3),
-#slide4:checked ~ #bullets label:nth-child(4) {
+#web_slide1:checked ~ #web_bullets label:nth-child(1),
+#web_slide2:checked ~ #web_bullets label:nth-child(2),
+#web_slide3:checked ~ #web_bullets label:nth-child(3),
+#web_slide4:checked ~ #web_bullets label:nth-child(4),
+#gj_slide1:checked ~ #gj_bullets label:nth-child(1),
+#gj_slide2:checked ~ #gj_bullets label:nth-child(2),
+#gj_slide3:checked ~ #gj_bullets label:nth-child(3),
+#gj_slide4:checked ~ #gj_bullets label:nth-child(4)  {
     
     background: #A2E4B8;
-}
-
-@media screen and (max-width: 900px) {
-
-    #slide1:checked ~ #controls label:nth-child(2),
-    #slide2:checked ~ #controls label:nth-child(3),
-    #slide3:checked ~ #controls label:nth-child(4),
-    #slide4:checked ~ #controls label:nth-child(1),
-    #slide1:checked ~ #controls label:nth-last-child(2),
-    #slide2:checked ~ #controls label:nth-last-child(3),
-    #slide3:checked ~ #controls label:nth-last-child(4),
-    #slide4:checked ~ #controls label:nth-last-child(1) {
-        
-        margin: 0;
-    }
 }

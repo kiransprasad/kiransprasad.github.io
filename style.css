@@ -113,20 +113,19 @@ h1, h2, h3, h4 {
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(1) {
     
-    background-image: url("res/LeftArrow.png");
+    background: url("res/RightArrow.png") no-repeat;
     background-color: #cccccc;
     float: right;
     margin: 0 0 0 50px;
     display: block;
 }
 
-#slide1:checked ~ #controls label:nth-last-child(2),
-#slide2:checked ~ #controls label:nth-last-child(3),
-#slide3:checked ~ #controls label:nth-last-child(4),
-#slide4:checked ~ #controls label:nth-last-child(1) {
+#slide1:checked ~ #controls label:nth-child(4),
+#slide2:checked ~ #controls label:nth-child(1),
+#slide3:checked ~ #controls label:nth-child(2),
+#slide4:checked ~ #controls label:nth-child(3) {
     
-    background-image: url("res/RightArrow.png");
-    background-color: #cccccc; 
+    background: url("res/LeftArrow.png") no-repeat;
     float: left;
     margin: 0 0 0 -50px;
     display: block;

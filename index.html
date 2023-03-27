@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- TO VIEW PREVIEW: CMD + SHIFT + V -->
 <html>
     <head>
         <meta charset="UTF-8" />
@@ -31,70 +32,63 @@
 
         <div id="MyProjects">
             <h2>My Projects</h2>
+            <h3>Websites</h3>
             <ul>
-                <li>
-                    <div>
-                        <h3>Websites</h3>
-                        <ul>
-                            <li>This Portfolio</li>
-                            <li>BIASL Website</li>
-                            <li>Grey(t)Water</li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h3>Game Jams</h3>
-                        <ul>
-                            <li>
-                                <div class="GameJamsDiv">
-                                    <h4>Wormholes</h4>
-                                    <iframe height="167" frameborder="0" src="https://itch.io/embed/724989" width="552"><a href="https://zephyr7.itch.io/wormholes">Wormholes by Zephyr7</a></iframe>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="GameJamsDiv">
-                                    <h4>Power Cord</h4>
-                                    <iframe height="167" frameborder="0" src="https://itch.io/embed/1087442" width="552"><a href="https://zephyr7.itch.io/power-cord">Power Cord by Zephyr7</a></iframe>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="GameJamsDiv">
-                                    <h4>Supermarket Scramble</h4>
-                                    <iframe height="167" frameborder="0" src="https://itch.io/embed/1177999" width="552"><a href="https://zephyr7.itch.io/supermarket-scramble">Supermarket Scramble by Zephyr7</a></iframe>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="GameJamsDiv">
-                                    <h4>Of Dice and Hens</h4>
-                                    <iframe height="167" frameborder="0" src="https://itch.io/embed/1624845" width="552"><a href="https://zephyr7.itch.io/of-dice-and-hens">Of Dice and Hens by Zephyr7</a></iframe>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <!--
-                <li>
-                    <div>
-                        <h3>Hackathons</h3>
-                        <ul>
-                            <li>Empty</li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h3>Applications</h3>
-                        <ul>
-                            <li>Empty</li>
-                        </ul>
-                    </div>
-                </li>
-                -->
+                <li>This Portfolio</li>
+                <li>BIASL Website</li>
+                <li>Grey(t)Water</li>
             </ul>
-            <!-- Include projects, demos -->
-            <!-- DESCRIBE the project - here you can explain the obstacles! -->
-            <!-- Can highlight the skills for each project -->
+            <div>
+                <h3>Game Jams</h3>
+                <div id="slider">
+                    <input type="radio" name="slider" id="slide1" checked>
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+                    <input type="radio" name="slider" id="slide4">
+                    <div id="slides">
+                        <div id="overflow">
+                            <div class="inner">
+                                <div class="slide slide1">
+                                    <div class="slide-content">
+                                        <h4>Wormholes</h4>
+                                        <iframe height="167" frameborder="0" src="https://itch.io/embed/724989" width="552"><a href="https://zephyr7.itch.io/wormholes">Wormholes by Zephyr7</a></iframe>
+                                    </div>
+                                </div>
+                                <div class="slide slide2">
+                                    <div class="slide-content">
+                                        <h4>Power Cord</h4>
+                                        <iframe height="167" frameborder="0" src="https://itch.io/embed/1087442" width="552"><a href="https://zephyr7.itch.io/power-cord">Power Cord by Zephyr7</a></iframe>
+                                    </div>
+                                </div>
+                                <div class="slide slide3">
+                                    <div class="slide-content">
+                                        <h4>Supermarket Scramble</h4>
+                                        <iframe height="167" frameborder="0" src="https://itch.io/embed/1177999" width="552"><a href="https://zephyr7.itch.io/supermarket-scramble">Supermarket Scramble by Zephyr7</a></iframe>
+                                    </div>
+                                </div>
+                                <div class="slide slide4">
+                                    <div class="slide-content">
+                                        <h4>Of Dice and Hens</h4>
+                                        <iframe height="167" frameborder="0" src="https://itch.io/embed/1624845" width="552"><a href="https://zephyr7.itch.io/of-dice-and-hens">Of Dice and Hens by Zephyr7</a></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="controls">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                        <label for="slide4"></label>
+                    </div>
+                </div>
+                <div id="bullets">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label> 
+                </div>
+            </div>
         </div>
     </body>
 </html>

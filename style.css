@@ -3,6 +3,6 @@ h1 {
 }
 
 .GameJamsDiv {
-    display: flex;
+    display: inline-flex;
 }
 

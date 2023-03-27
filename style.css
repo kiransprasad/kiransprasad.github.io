@@ -113,7 +113,8 @@ h1, h2, h3, h4 {
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(1) {
     
-    background: white;
+    background-image: url("res/LeftArrow.png");
+    background-color: #cccccc;
     float: left;
     margin: 0 0 0 -50px;
     display: block;
@@ -124,8 +125,9 @@ h1, h2, h3, h4 {
 #slide3:checked ~ #controls label:nth-last-child(4),
 #slide4:checked ~ #controls label:nth-last-child(1) {
     
-    background: white;
-    float: left;
+    background-image: url("res/RightArrow.png");
+    background-color: #cccccc; 
+    float: right;
     margin: 0 0 0 -50px;
     display: block;
 }

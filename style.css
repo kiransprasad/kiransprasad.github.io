@@ -139,7 +139,7 @@ h1, h2, h3, h4 {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background: yellow;
+    background: green;
     margin: 0 10px;
 }
 
@@ -148,7 +148,7 @@ h1, h2, h3, h4 {
 #slide3:checked ~ #bullets label:nth-child(3),
 #slide4:checked ~ #bullets label:nth-child(4) {
     
-    background: greenyellow;
+    background: aquamarine;
 }
 
 @media screen and (max-width: 900px) {

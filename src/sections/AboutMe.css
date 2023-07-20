@@ -1,0 +1,46 @@
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.buttons li {
+    display: inline;
+}
+
+.buttons li button {
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.buttons li button:hover{
+    background-color: #a2e4b8;
+    color: #1a1a1a;
+}
+
+#Normal {
+    display: block;
+}
+
+#Small, #Medium {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    #Medium {
+        display: block;
+    }
+    #Small, #Large {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    #Small {
+        display: block;
+    }
+    #Medium, #Large {
+        display: none;
+    }
+}

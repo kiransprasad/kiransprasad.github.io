@@ -3,16 +3,24 @@ import { useSwipeable } from "react-swipeable";
 
 import "./Carousel.css";
 
-export const CarouselItem = ({ children }) => {
+export const CarouselItem = ({ children, ShiftLeft, ShiftRight }) => {
+
     return (
         <div className="carousel-item">
-            {children}
+            <button className="leftArrow" onClick={ShiftLeft}> &lt; </button>
+            <div>
+                {children}
+            </div>
+            <button className="rightArrow" onClick={ShiftRight}> &gt; </button>
         </div>
     );
 };
 
 const Carousel = ({ children }) => {
     const [activeIndex, setActiveIndex] = useState(0);
+
+    const ShiftLeft = () => {updateIndex(activeIndex - 1);}
+    const ShiftRight = () => {updateIndex(activeIndex + 1);}
 
     const updateIndex = (newIndex) => {
         if (newIndex < 0) {
@@ -30,26 +38,17 @@ const Carousel = ({ children }) => {
     });
 
     return (
-        <div
-            {...handlers}
-            className="carousel"
-        >
-        <div
-            className="inner"
-            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-        >
+        <div {...handlers} className="carousel">
+
+        <div className="inner" style={{ transform: `translateX(-${activeIndex * (100 + 1/3) + 0.125}%)` }} >
+
             {React.Children.map(children, (child, index) => {
-            return React.cloneElement(child);
+                return React.cloneElement(child, { ShiftLeft, ShiftRight } );
             })}
+
         </div>
+
         <div className="indicators">
-            <button
-            onClick={() => {
-                updateIndex(activeIndex - 1);
-            }}
-            >
-            Prev
-            </button>
             {React.Children.map(children, (child, index) => {
             return (
                 <button
@@ -58,17 +57,9 @@ const Carousel = ({ children }) => {
                     updateIndex(index);
                 }}
                 >
-                {index + 1}
                 </button>
             );
             })}
-            <button
-            onClick={() => {
-                updateIndex(activeIndex + 1);
-            }}
-            >
-            Next
-            </button>
         </div>
         </div>
     );

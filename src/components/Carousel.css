@@ -1,7 +1,6 @@
 .carousel {
     overflow: hidden;
-    width: 75%;
-    border: 2px solid hsl(320, 100%, 60%);
+    width: 100%;
     margin: auto;
 }
 
@@ -10,17 +9,39 @@
     transition: transform 1s cubic-bezier(0.5, 0, 0.5, 1.2);
 }
 
+.leftArrow, .rightArrow {
+    text-align: center;
+    font-size: 2em;
+    color: #a2e4b8;
+    background-color: transparent;
+    border-color: transparent;
+    height: 100%;
+    transition: 0.3s;
+    border-radius: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.leftArrow:hover, .rightArrow:hover {
+    background-color: rgba(162,228,184,0.5);
+    color: white;
+}
+
+.leftArrow:focus, .rightArrow:focus {
+    color: #a2e4b8;
+    background-color: transparent;
+}
+
+
 .carousel-item {
     display: inline-flex;
     align-items: center;
 
-    border-radius: 25px;
-    border: 2px solid #73AD21;
-    margin: 0 25%;
-    width: 50%;
-    height: 300px;
+    width: 100%;
+    height: 80vh;
+    padding-bottom: auto;
 
-    justify-content: center;
+    justify-content: space-between;
     color: #fff;
 }
 
@@ -30,10 +51,15 @@
 }
 
 .indicators > button {
+    display: block;
     margin: 5px;
+    padding: 0;
+    border: 2px solid #a2e4b8;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
 }
 
 .indicators > button.active {
     background-color: green;
-    color: #fff;
 }

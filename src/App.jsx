@@ -2,7 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
-// Importing React Components
+// Importing Website Sections
+import Title from './sections/Title.jsx'
 import AboutMe from './sections/AboutMe.jsx'
 import Projects from './sections/Projects.jsx'
 
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <>
-      <h1>Kiran Prasad</h1>
+      <Title />
       <AboutMe />
       <Projects />
     </>
